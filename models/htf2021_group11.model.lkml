@@ -59,7 +59,7 @@ explore: religions {}
 explore: ride_info {
   join: ride_passengers{
     type: left_outer
-    sql_on: ${ride_info.ride_id}.id} = ${ride_passengers.passenger_id}.id} ;;
+    sql_on: ${ride_info.ride_id} = ${ride_passengers.passenger_id} ;;
     relationship: many_to_one
   }
 }
@@ -67,7 +67,7 @@ explore: ride_info {
 explore: ride_passengers {
   join: people{
     type: left_outer
-    sql_on: ${people.id} = ${ride_passengers.passenger_id}.id} ;;
+    sql_on: ${people.id} = ${ride_passengers.passenger_id} ;;
     relationship: many_to_one
   }
 }
