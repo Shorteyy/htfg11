@@ -36,17 +36,17 @@ explore: aib_bnbs_nyc {}
 
 explore: financial_status {}
 
-explore: people {
-  join: ages {
-    type: left_outer
-    sql_on: ${people.id} = ${ages.id} ;;
-    relationship: many_to_one
-  }
-}
+explore: people {}
 
 explore: locations {}
 
-explore: gender {}
+explore: gender {
+  join: ages {
+    type: left_outer
+    sql_on: ${ages.id}.id} = ${ages.id} ;;
+    relationship: many_to_one
+  }
+}
 
 explore: nationalities {}
 
